@@ -117,7 +117,8 @@ class GestorCms extends Controller {
 
 		$this->Mailer = $Mailer;
 
-		$this->OrganizationId = 1; /*5 antes de dar push*/
+		// $this->OrganizationId = 1;
+		$this->OrganizationId = 8;
 	}
 
 	public function getIndex()
@@ -126,33 +127,13 @@ class GestorCms extends Controller {
 			// 			->with('theme', 'bootstrap-simplex-theme');
 	}
 
-	public function postAfiliado()
-	{
-		$input = $this->Input->json()->all();
-
-		$currentSettingConfiguration = $this->SettingManagerService->getCurrentSettingConfiguration($this->OrganizationId);
-
-		// var_dump($currentSettingConfiguration);die();
-
-		$this->Mailer->send('decima-eventos-slsv::emails.afiliados', array('input' => $input), function($message) use ($currentSettingConfiguration)
-		{
-			$message->to($currentSettingConfiguration['user_for_notification'])
-				->subject('Solictud de afiliación ' . date('d/m/Y'))
-				->replyTo($currentSettingConfiguration['user_for_notification'], 'Cabal')
-				->bcc('freelance@mariogallegos.com');
-		});
-
-		return json_encode(array('success' => true));
-	}
-
 	public function postCliente()
 	{
 		$input = $this->Input->json()->all();
 
 		// $currentSettingConfiguration = $this->SettingManagerService->getCurrentSettingConfiguration($this->OrganizationId);
 
-		$currentSettingConfiguration['user_for_notification'] = 'monge.sylvana@gmail.com';
-		// $currentSettingConfiguration['user_for_notification'] = 'freelance@mariogallegos.com';
+		$currentSettingConfiguration['user_for_notification'] = 'freelance@mariogallegos.com';
 
 		$this->Mailer->send('decima-eventos-slsv::emails.clientes', array('input' => $input), function($message) use ($currentSettingConfiguration)
 		{

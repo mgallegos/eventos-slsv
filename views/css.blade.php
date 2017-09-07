@@ -20,11 +20,15 @@
     /*background: rgba(109,145,38,0.6) !important;*/
     background: rgb(109,145,38) !important;
     width: 100%;
-    height: auto;
+    height: auto !important;
     /*background-color: #000;*/
     /*opacity: 0.7;*/
     /*filter: alpha(opacity=70);*/
     /*height: 370px;*/
+  }
+
+  label {
+    font-size: 1rem !important;
   }
 
   .top-bar {

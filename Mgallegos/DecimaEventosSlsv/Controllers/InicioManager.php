@@ -156,6 +156,7 @@ class InicioManager extends Controller {
 			->with('prefix', 'cms-blog-')
 			->with('url', $this->Url->to('/'))
 			->with('blogUrl', $this->Url->to('/'))
+			->with('eventUrl', '')
 			->with('blogPosts', $this->BlogManagerService->getBlogPosts($postPerPage, 1, null, $types, null, null, null, 'date', 'desc', null, $this->OrganizationId, true));
 	}
 }

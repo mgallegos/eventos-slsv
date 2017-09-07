@@ -6,42 +6,7 @@
 
 	$(document).ready(function()
 	{
-		// $('#cs-act-modal-form').jqMgVal('addFormFieldsValidations');
-		$('#ob-fa-form').jqMgVal('addFormFieldsValidations');
-
-		// $('#cs-act-btn-modal').click(function()
-		// {
-		// 	var data = $('#cs-act-modal-form').formToObject('cs-act-');
-		//
-		// 	if(!$('#cs-act-modal-form').jqMgVal('isFormValid'))
-		// 	{
-		// 		return;
-		// 	}
-		//
-		// 	$.ajax(
-		// 	{
-		// 		type: 'POST',
-		// 		data: JSON.stringify(data),
-		// 		dataType : 'json',
-		// 		url: $('#cs-act-modal-form').attr('action'),
-		// 		error: function (jqXHR, textStatus, errorThrown)
-		// 		{
-		// 			handleServerExceptions(jqXHR, 'cs-act-modal-form');
-		// 		},
-		// 		beforeSend:function()
-		// 		{
-		// 			$('#app-loader').removeClass('hidden-xs-up');
-		// 			disabledAll();
-		// 		},
-		// 		success:function(json)
-		// 		{
-		// 			$('#cs-act-modal-form').showAlertAsFirstChild('alert-success', 'Gracias por su interés, nos comunicaremos con usted a la brevedad posible.', 10000);
-		// 			$('#cs-act-modal-form').jqMgVal('clearForm');
-		// 			$('#app-loader').addClass('hidden-xs-up');
-		// 			enableAll();
-		// 		}
-		// 	});
-		// });
+		$('#registration-form').jqMgVal('addFormFieldsValidations');
 
 		$('#ob-fa-btn').click(function()
 		{

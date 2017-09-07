@@ -1,4 +1,4 @@
-  <footer class="bs-docs-footer text-center" role="contentinfo">
+  <footer class="text-center" role="contentinfo">
 
 
   <script>(function(d, s, id) {
@@ -16,9 +16,9 @@
         <div class="col-md-6">
           <div class="card footer-card-background" style="border:none;">
             <div class="card-block" style="padding: 1.25em 0 !important">
-              <h4 class="card-title-footer">Formulario de ....</h4>
-              <p class="card-text-footer" style="text-align:justify;">Estimados les invitamos.....</p>
-              {!! Form::open(array('id' => 'ob-fa-form', 'url' => URL::to('cms/obsworld/cliente'), 'role' => 'form', 'onsubmit' => 'return false;')) !!}
+              <h4 class="card-title-footer">Lista de Correo</h4>
+              <p class="card-text-footer" style="text-align:justify;">Entérate de todos los eventos que organiza nuestra comunidad.</p>
+              {!! Form::open(array('id' => 'ob-fa-form', 'url' => URL::to('cms/eventos-slsv/cliente'), 'role' => 'form', 'onsubmit' => 'return false;')) !!}
                 <div class="form-group cs-ac">
                   {!! Form::text('ob-fa-name', null , array('id' => 'ob-fa-name', 'class' => 'form-control',  'placeholder'  =>  'Nombre', 'data-mg-required' => '')) !!}
                 </div>
@@ -28,10 +28,10 @@
                 <div class="form-group cs-ac">
                   {!! Form::text('ob-fa-email', null , array('id' => 'ob-fa-email', 'class' => 'form-control',  'placeholder'  =>  'Correo electrónico',  'data-mg-required' => '')) !!}
                 </div>
-                <div class="form-group cs-ac">
+                <!-- <div class="form-group cs-ac">
                   {!! Form::date('ob-fa-date-birth', array('class' => 'form-control', 'data-mg-required' => '', 'placeholder' => 'Fecha de nacimiento dd/mm/yy')) !!}
+                </div> -->
                   <!-- <p class="help-block" style="color:#FFFFFF; margin-bottom:20px">**Todos los campos son requeridos**</p> -->
-                </div>
               {!! Form::close() !!}
               <button id="ob-fa-btn" class="btn btn-dark btn-footer-suscribe" type="submit">¡ S u s c r í b e m e !</button>
             </div>

@@ -22,10 +22,8 @@
 //https://laravel.com/docs/5.1/controllers
 // Route::put('/cms/decimaerp/{id}', 'Mgallegos\DecimaWeb\Controllers\GestorCms@getIndex');
 
+Route::controller('/cms/sfd2017/login', 'Mgallegos\DecimaEventosSlsv\Controllers\LoginManager');
+
 Route::controller('/cms/sfd2017', 'Mgallegos\DecimaEventosSlsv\Controllers\InicioManager');
-
-Route::controller('/cms/eventos-slsv/blog', 'Mgallegos\DecimaEventosSlsv\Controllers\BlogManager');
-
-// Route::controller('/cms/eventos-slsv/tienda', 'Mgallegos\DecimaEventosSlsv\Controllers\OnlineShopManager');
 
 Route::controller('/cms/eventos-slsv', 'Mgallegos\DecimaEventosSlsv\Controllers\GestorCms');

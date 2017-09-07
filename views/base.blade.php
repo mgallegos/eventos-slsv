@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<!-- <link rel="icon" href="https://storage.googleapis.com/decimaerp/organizations/8/Cabeza_Ob_vectorx16.ico"> -->
+	<link rel="shortcut icon" href="http://www.slsv.org/sites/all/themes/business/favicon.ico" type="image/vnd.microsoft.icon" />
 	<meta charset="utf-8">
 	@include('layouts.header-css-cdn-b4-beta')
 	@include('layouts.header-javascript-cdn-b4-beta')

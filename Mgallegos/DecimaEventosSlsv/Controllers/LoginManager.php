@@ -37,7 +37,7 @@ use Mgallegos\LaravelJqgrid\Facades\GridEncoder;
 
 use App\Http\Controllers\Controller;
 
-class BlogManager extends Controller {
+class LoginManager extends Controller {
 
 	/**
 	 * Blog Manager Service
@@ -148,37 +148,8 @@ class BlogManager extends Controller {
 
 	public function getIndex()
 	{
-		$postPerPage = 10;
-		$types = array('T', 'E');
-
-		$blogUrl = $this->Url->to('/') . '/blog';
-		$blogId = $this->Session->get('blogId', '');
-		$blogPosts = $this->BlogManagerService->getBlogPosts($postPerPage, 1, null, $types, null, null, 'date', 'desc', $blogId, $this->OrganizationId, true);
-
-		if(!empty($blogId) && count($blogPosts['blogPosts']) == 1)
-		{
-			$ogTitle = $blogPosts['blogPosts'][0]['tittle'];
-			$ogDescription = $blogPosts['blogPosts'][0]['summary'];
-			$ogImage = $blogPosts['blogPosts'][0]['preview_image_url'];
-		}
-		else
-		{
-			$ogTitle = $ogDescription = $ogImage = null;
-		}
-
-		return $this->View->make('decima-eventos-slsv::blog')
-			->with('prefix', 'cms-blog-')
-			->with('ogTitle', $ogTitle)
-			->with('ogDescription', $ogDescription)
-			->with('ogImage', $ogImage)
-			->with('postPerPage', $postPerPage)
-			->with('blogUrl', $blogUrl)
-			->with('blogId', $blogId)
-			->with('organizationId', $this->OrganizationId)
-			// ->with('blogType', 'ilustration')
-			->with('types', $types)
-			->with('orderBy', $this->BlogManagerService->getOrderBy())
-			->with('blogPosts', $blogPosts);
-
+		return $this->View->make('decima-eventos-slsv::login')
+			->with('eventUrl', $this->Url->to('cms/sfd2017'))
+			->with('prefix', 'slsv-login-');
 	}
 }
