@@ -77,8 +77,8 @@
                   <div class="row">
                     <div class="col-lg-6 col-md-12">
                       <div class="form-group mg-hm">
-                        <label for="gender">Género</label>
-              					{!! Form::select('gender', array('' => '', 'M' => 'Masculino', 'F' => 'Femenino', 'O' => 'Otro'), null, array('id'=>'gender', 'class'=>'form-control', 'data-mg-required'=>'')) !!}
+                        <label for="gender">Sexo</label>
+              					{!! Form::select('gender', array('' => '', 'M' => 'Masculino', 'F' => 'Femenino'), null, array('id'=>'gender', 'class'=>'form-control', 'data-mg-required'=>'')) !!}
             				</div>
                     </div>
                     <div class="col-lg-6 col-md-12">
@@ -175,7 +175,7 @@
                         </div>
                         <div class="form-check">
                           <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value=""> LXLE
+                            <input class="form-check-input" type="checkbox" value=""> Antergos
                           </label>
                         </div>
                       </div>
