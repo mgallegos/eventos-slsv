@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12">
                       <div class="form-group mg-hm">
-                        <label for="password-confirmation">Apellido</label>
+                        <label for="password-confirmation">Confirmar contraseña</label>
               					<div class="input-group">
               						<span class="input-group-addon">
               							<i class="fa fa-key"></i>
