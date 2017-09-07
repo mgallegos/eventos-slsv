@@ -77,7 +77,7 @@
                   <div class="row">
                     <div class="col-lg-6 col-md-12">
                       <div class="form-group mg-hm">
-                        <label for="gender">Sexo</label>
+                        <label for="gender">Género</label>
               					{!! Form::select('gender', array('' => '', 'M' => 'Masculino', 'F' => 'Femenino'), null, array('id'=>'gender', 'class'=>'form-control', 'data-mg-required'=>'')) !!}
             				</div>
                     </div>
